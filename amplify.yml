@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn install
+    build:
+      commands:
+        - env | grep -e BACKEND_URL -e BASE_URL -e DEFAULT_REGION -e NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID  >> .env.production
+        - yarn run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .next/cache/**/*
+      - node_modules/**/*
