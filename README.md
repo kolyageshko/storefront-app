@@ -24,7 +24,7 @@ This frontend **requires** a running backend to work.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kolyageshko/citadelcult-storefront.git
+   git clone https://github.com/kolyageshko/storefront-app.git
    cd citadelcult-storefront
    ```
 
